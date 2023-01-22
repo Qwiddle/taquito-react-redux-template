@@ -6,22 +6,26 @@ import {
   disconnectWallet,
   getAccount,
   getConnected,
+  setAccount,
 } from '../slices/wallet';
 
 function Wallet() {
   const connected = useAppSelector(getConnected);
   const dispatch = useAppDispatch();
 
-  console.log(connected);
-
   useEffect(() => {
     const retrieveAccount = async () => {
-      await dispatch(getAccount()).unwrap();
+      const account = await dispatch(getAccount()).unwrap();
+      if (account) await dispatch(setAccount(account));
+
+      return account;
     };
 
-    retrieveAccount().catch(e => {
-      console.error(e);
-    });
+    retrieveAccount()
+      .then()
+      .catch(e => {
+        console.error(e);
+      });
   }, []);
 
   const onConnect = async () => {

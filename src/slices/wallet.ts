@@ -73,6 +73,7 @@ const walletSlice = createSlice({
     },
     setAccount: (state: any, action: PayloadAction<AccountInfo>) => {
       state.account = action.payload;
+      if (!state.connected) state.connected = true;
     },
   },
   extraReducers: builder => {
@@ -90,6 +91,8 @@ const walletSlice = createSlice({
       });
   },
 });
+
+export const { setConnection, setAccount } = walletSlice.actions;
 
 export const getUserAccount = (state: RootState) => state.wallet.account;
 export const getConnected = (state: RootState) => state.wallet.connected;
