@@ -8,6 +8,7 @@ import {
   getConnected,
   setAccount,
 } from '../slices/wallet';
+import { WalletButton } from './WalletButton';
 
 function Wallet() {
   const connected = useAppSelector(getConnected);
@@ -47,15 +48,13 @@ function Wallet() {
   };
 
   return connected ? (
-    <button type="submit" className="wallet" onClick={() => onDisconnect()}>
-      <img src="images/user-check.svg" alt="user-connected" />
-      &nbsp; Disconnect
-    </button>
+    <WalletButton onClick={() => onDisconnect()}>
+      ✅ &nbsp; Disconnect
+    </WalletButton>
   ) : (
-    <button type="submit" className="wallet" onClick={() => onConnect()}>
-      <img src="images/user-x.svg" alt="user-disconnected" />
-      &nbsp; Connect wallet
-    </button>
+    <WalletButton onClick={() => onConnect()}>
+      🔴 &nbsp; Connect Wallet
+    </WalletButton>
   );
 }
 
