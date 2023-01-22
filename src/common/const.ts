@@ -1,6 +1,6 @@
 import { DAppClientOptions, NetworkType } from '@airgap/beacon-sdk';
 
-export const DAPP_NAME: string = 'Reduxito';
+export const DAPP_NAME: string = 'ArtDEX+';
 export const DAPP_ICON_URL: string = 'https://tezostaquito.io/img/favicon.svg';
 
 export const DEFAULT_RPC: string = 'https://rpc.ghostnet.teztnets.xyz/';

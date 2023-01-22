@@ -11,6 +11,7 @@ export const Nav = styled.div`
     max-height: 170px;
     gap: 20px;
   }
+  padding-bottom: 2rem;
 `;
 
 export const NavEnd = styled.div`
