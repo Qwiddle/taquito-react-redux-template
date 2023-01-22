@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../store/redux.hooks';
+import { useAppDispatch, useAppSelector } from '../../store/redux.hooks';
 import {
   connectWallet,
   disconnectWallet,
   getAccount,
   getConnected,
   setAccount,
-} from '../slices/wallet';
+} from '../../slices/wallet';
 import { WalletButton } from './WalletButton';
 
 function Wallet() {
