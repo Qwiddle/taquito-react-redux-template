@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import './App.css';
 import NavBar from './NavBar/NavBar';
+import StatBar from './StatBar/StatBar';
 import Swaps from './Swaps/Swaps';
 
 export const Container = styled.div`
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Container>
+        <StatBar />
         <Swaps />
       </Container>
     </div>
