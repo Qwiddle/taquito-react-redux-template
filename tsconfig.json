@@ -23,5 +23,8 @@
   "include": [
     "src",
     ".eslintrc.js"
-  ]
+  ],
+  "typingOptions": {
+    "enableAutoDiscovery": true
+  }
 }
